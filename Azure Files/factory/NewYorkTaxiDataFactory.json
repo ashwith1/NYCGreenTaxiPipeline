@@ -1,0 +1,14 @@
+{
+	"name": "NewYorkTaxiDataFactory",
+	"properties": {
+		"globalConfigurations": {
+			"PipelineBillingEnabled": "true"
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "04481c0b-41a7-4900-a69d-57eb73130aeb",
+		"tenantId": "787048c4-ce0e-4446-81e0-2fa0524ec702"
+	}
+}

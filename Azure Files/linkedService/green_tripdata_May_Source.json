@@ -1,0 +1,12 @@
+{
+	"name": "green_tripdata_May_Source",
+	"properties": {
+		"annotations": [],
+		"type": "HttpServer",
+		"typeProperties": {
+			"url": "https://raw.githubusercontent.com/ashwith1/DE2/master/data/New%20York%20Taxi%20Data%20Green/green_tripdata_2023-05.parquet",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}

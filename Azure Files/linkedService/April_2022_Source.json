@@ -1,0 +1,12 @@
+{
+	"name": "April_2022_Source",
+	"properties": {
+		"annotations": [],
+		"type": "HttpServer",
+		"typeProperties": {
+			"url": "https://raw.githubusercontent.com/ashwith1/DE2/master/data/New%20York%20Taxi%20Data%20Green/2022/green_tripdata_2022-04.parquet\t\t",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}

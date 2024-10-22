@@ -1,0 +1,334 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "NewYorkTaxiDataFactory"
+		},
+		"green_tripdata_April_Sink_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'green_tripdata_April_Sink'"
+		},
+		"green_tripdata_August_Sink_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'green_tripdata_August_Sink'"
+		},
+		"green_tripdata_December_Sink_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'green_tripdata_December_Sink'"
+		},
+		"green_tripdata_Feb_Sink_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'green_tripdata_Feb_Sink'"
+		},
+		"green_tripdata_JanSink_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'green_tripdata_JanSink'"
+		},
+		"green_tripdata_July_Sink_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'green_tripdata_July_Sink'"
+		},
+		"green_tripdata_June_Sink_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'green_tripdata_June_Sink'"
+		},
+		"green_tripdata_March_Sink_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'green_tripdata_March_Sink'"
+		},
+		"green_tripdata_May_Sink_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'green_tripdata_May_Sink'"
+		},
+		"green_tripdata_November_Sink_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'green_tripdata_November_Sink'"
+		},
+		"green_tripdata_October_Sink_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'green_tripdata_October_Sink'"
+		},
+		"green_tripdata_September_Sink_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'green_tripdata_September_Sink'"
+		},
+		"green_tripdata_April_Sink_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://newyorktaxistorage98.dfs.core.windows.net/"
+		},
+		"green_tripdata_April_Source_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com/ashwith1/DE2/master/data/New%20York%20Taxi%20Data%20Green/green_tripdata_2023-04.parquet"
+		},
+		"green_tripdata_August_Sink_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://newyorktaxistorage98.dfs.core.windows.net/"
+		},
+		"green_tripdata_August_Source_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com/ashwith1/DE2/master/data/New%20York%20Taxi%20Data%20Green/green_tripdata_2023-08.parquet"
+		},
+		"green_tripdata_December_Sink_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://newyorktaxistorage98.dfs.core.windows.net/"
+		},
+		"green_tripdata_December_Source_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com/ashwith1/DE2/master/data/New%20York%20Taxi%20Data%20Green/green_tripdata_2023-12.parquet"
+		},
+		"green_tripdata_Feb_Sink_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://newyorktaxistorage98.dfs.core.windows.net/"
+		},
+		"green_tripdata_Feb_Source_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com/ashwith1/DE2/master/data/New%20York%20Taxi%20Data%20Green/green_tripdata_2023-02.parquet"
+		},
+		"green_tripdata_Jan_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com/ashwith1/DE2/master/data/New%20York%20Taxi%20Data%20Green/green_tripdata_2023-01.parquet"
+		},
+		"green_tripdata_JanSink_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://newyorktaxistorage98.dfs.core.windows.net/"
+		},
+		"green_tripdata_July_Sink_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://newyorktaxistorage98.dfs.core.windows.net/"
+		},
+		"green_tripdata_July_Source_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com/ashwith1/DE2/master/data/New%20York%20Taxi%20Data%20Green/green_tripdata_2023-07.parquet"
+		},
+		"green_tripdata_June_Sink_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://newyorktaxistorage98.dfs.core.windows.net/"
+		},
+		"green_tripdata_June_Source_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com/ashwith1/DE2/master/data/New%20York%20Taxi%20Data%20Green/green_tripdata_2023-06.parquet"
+		},
+		"green_tripdata_March_Sink_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://newyorktaxistorage98.dfs.core.windows.net/"
+		},
+		"green_tripdata_March_Source_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com/ashwith1/DE2/master/data/New%20York%20Taxi%20Data%20Green/green_tripdata_2023-03.parquet"
+		},
+		"green_tripdata_May_Sink_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://newyorktaxistorage98.dfs.core.windows.net/"
+		},
+		"green_tripdata_May_Source_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com/ashwith1/DE2/master/data/New%20York%20Taxi%20Data%20Green/green_tripdata_2023-05.parquet"
+		},
+		"green_tripdata_November_Sink_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://newyorktaxistorage98.dfs.core.windows.net/"
+		},
+		"green_tripdata_November_Source_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com/ashwith1/DE2/master/data/New%20York%20Taxi%20Data%20Green/green_tripdata_2023-11.parquet"
+		},
+		"green_tripdata_October_Sink_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://newyorktaxistorage98.dfs.core.windows.net/"
+		},
+		"green_tripdata_October_Source_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com/ashwith1/DE2/master/data/New%20York%20Taxi%20Data%20Green/green_tripdata_2023-10.parquet"
+		},
+		"green_tripdata_September_Sink_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://newyorktaxistorage98.dfs.core.windows.net/"
+		},
+		"green_tripdata_September_Source_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com/ashwith1/DE2/master/data/New%20York%20Taxi%20Data%20Green/green_tripdata_2023-09.parquet"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "NewYorkTaxiDataFactory_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"green_tripdata_April_Sink_accountKey": {
+						"value": "[parameters('green_tripdata_April_Sink_accountKey')]"
+					},
+					"green_tripdata_August_Sink_accountKey": {
+						"value": "[parameters('green_tripdata_August_Sink_accountKey')]"
+					},
+					"green_tripdata_December_Sink_accountKey": {
+						"value": "[parameters('green_tripdata_December_Sink_accountKey')]"
+					},
+					"green_tripdata_Feb_Sink_accountKey": {
+						"value": "[parameters('green_tripdata_Feb_Sink_accountKey')]"
+					},
+					"green_tripdata_JanSink_accountKey": {
+						"value": "[parameters('green_tripdata_JanSink_accountKey')]"
+					},
+					"green_tripdata_July_Sink_accountKey": {
+						"value": "[parameters('green_tripdata_July_Sink_accountKey')]"
+					},
+					"green_tripdata_June_Sink_accountKey": {
+						"value": "[parameters('green_tripdata_June_Sink_accountKey')]"
+					},
+					"green_tripdata_March_Sink_accountKey": {
+						"value": "[parameters('green_tripdata_March_Sink_accountKey')]"
+					},
+					"green_tripdata_May_Sink_accountKey": {
+						"value": "[parameters('green_tripdata_May_Sink_accountKey')]"
+					},
+					"green_tripdata_November_Sink_accountKey": {
+						"value": "[parameters('green_tripdata_November_Sink_accountKey')]"
+					},
+					"green_tripdata_April_Sink_properties_typeProperties_url": {
+						"value": "[parameters('green_tripdata_April_Sink_properties_typeProperties_url')]"
+					},
+					"green_tripdata_April_Source_properties_typeProperties_url": {
+						"value": "[parameters('green_tripdata_April_Source_properties_typeProperties_url')]"
+					},
+					"green_tripdata_August_Sink_properties_typeProperties_url": {
+						"value": "[parameters('green_tripdata_August_Sink_properties_typeProperties_url')]"
+					},
+					"green_tripdata_August_Source_properties_typeProperties_url": {
+						"value": "[parameters('green_tripdata_August_Source_properties_typeProperties_url')]"
+					},
+					"green_tripdata_December_Sink_properties_typeProperties_url": {
+						"value": "[parameters('green_tripdata_December_Sink_properties_typeProperties_url')]"
+					},
+					"green_tripdata_December_Source_properties_typeProperties_url": {
+						"value": "[parameters('green_tripdata_December_Source_properties_typeProperties_url')]"
+					},
+					"green_tripdata_Feb_Sink_properties_typeProperties_url": {
+						"value": "[parameters('green_tripdata_Feb_Sink_properties_typeProperties_url')]"
+					},
+					"green_tripdata_Feb_Source_properties_typeProperties_url": {
+						"value": "[parameters('green_tripdata_Feb_Source_properties_typeProperties_url')]"
+					},
+					"green_tripdata_Jan_properties_typeProperties_url": {
+						"value": "[parameters('green_tripdata_Jan_properties_typeProperties_url')]"
+					},
+					"green_tripdata_JanSink_properties_typeProperties_url": {
+						"value": "[parameters('green_tripdata_JanSink_properties_typeProperties_url')]"
+					},
+					"green_tripdata_July_Sink_properties_typeProperties_url": {
+						"value": "[parameters('green_tripdata_July_Sink_properties_typeProperties_url')]"
+					},
+					"green_tripdata_July_Source_properties_typeProperties_url": {
+						"value": "[parameters('green_tripdata_July_Source_properties_typeProperties_url')]"
+					},
+					"green_tripdata_June_Sink_properties_typeProperties_url": {
+						"value": "[parameters('green_tripdata_June_Sink_properties_typeProperties_url')]"
+					},
+					"green_tripdata_June_Source_properties_typeProperties_url": {
+						"value": "[parameters('green_tripdata_June_Source_properties_typeProperties_url')]"
+					},
+					"green_tripdata_March_Sink_properties_typeProperties_url": {
+						"value": "[parameters('green_tripdata_March_Sink_properties_typeProperties_url')]"
+					},
+					"green_tripdata_March_Source_properties_typeProperties_url": {
+						"value": "[parameters('green_tripdata_March_Source_properties_typeProperties_url')]"
+					},
+					"green_tripdata_May_Sink_properties_typeProperties_url": {
+						"value": "[parameters('green_tripdata_May_Sink_properties_typeProperties_url')]"
+					},
+					"green_tripdata_May_Source_properties_typeProperties_url": {
+						"value": "[parameters('green_tripdata_May_Source_properties_typeProperties_url')]"
+					},
+					"green_tripdata_November_Sink_properties_typeProperties_url": {
+						"value": "[parameters('green_tripdata_November_Sink_properties_typeProperties_url')]"
+					},
+					"green_tripdata_November_Source_properties_typeProperties_url": {
+						"value": "[parameters('green_tripdata_November_Source_properties_typeProperties_url')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "NewYorkTaxiDataFactory_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"green_tripdata_October_Sink_accountKey": {
+						"value": "[parameters('green_tripdata_October_Sink_accountKey')]"
+					},
+					"green_tripdata_September_Sink_accountKey": {
+						"value": "[parameters('green_tripdata_September_Sink_accountKey')]"
+					},
+					"green_tripdata_October_Sink_properties_typeProperties_url": {
+						"value": "[parameters('green_tripdata_October_Sink_properties_typeProperties_url')]"
+					},
+					"green_tripdata_October_Source_properties_typeProperties_url": {
+						"value": "[parameters('green_tripdata_October_Source_properties_typeProperties_url')]"
+					},
+					"green_tripdata_September_Sink_properties_typeProperties_url": {
+						"value": "[parameters('green_tripdata_September_Sink_properties_typeProperties_url')]"
+					},
+					"green_tripdata_September_Source_properties_typeProperties_url": {
+						"value": "[parameters('green_tripdata_September_Source_properties_typeProperties_url')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'NewYorkTaxiDataFactory_ArmTemplate_0')]"
+			]
+		},
+		{
+			"name": "NewYorkTaxiDataFactory_ArmTemplate_2",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_2.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'NewYorkTaxiDataFactory_ArmTemplate_1')]"
+			]
+		}
+	]
+}

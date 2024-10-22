@@ -1,0 +1,21 @@
+{
+	"name": "Febuary_2023_Sink1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Febuary_2023_Sink1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "green_tripdata_2023-02.parquet",
+				"folderPath": "raw data/2023",
+				"fileSystem": "blob-container"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}

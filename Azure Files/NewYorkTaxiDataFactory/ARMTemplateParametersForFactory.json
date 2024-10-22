@@ -1,0 +1,117 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "NewYorkTaxiDataFactory"
+		},
+		"green_tripdata_April_Sink_accountKey": {
+			"value": ""
+		},
+		"green_tripdata_August_Sink_accountKey": {
+			"value": ""
+		},
+		"green_tripdata_December_Sink_accountKey": {
+			"value": ""
+		},
+		"green_tripdata_Feb_Sink_accountKey": {
+			"value": ""
+		},
+		"green_tripdata_JanSink_accountKey": {
+			"value": ""
+		},
+		"green_tripdata_July_Sink_accountKey": {
+			"value": ""
+		},
+		"green_tripdata_June_Sink_accountKey": {
+			"value": ""
+		},
+		"green_tripdata_March_Sink_accountKey": {
+			"value": ""
+		},
+		"green_tripdata_May_Sink_accountKey": {
+			"value": ""
+		},
+		"green_tripdata_November_Sink_accountKey": {
+			"value": ""
+		},
+		"green_tripdata_October_Sink_accountKey": {
+			"value": ""
+		},
+		"green_tripdata_September_Sink_accountKey": {
+			"value": ""
+		},
+		"green_tripdata_April_Sink_properties_typeProperties_url": {
+			"value": "https://newyorktaxistorage98.dfs.core.windows.net/"
+		},
+		"green_tripdata_April_Source_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/ashwith1/DE2/master/data/New%20York%20Taxi%20Data%20Green/green_tripdata_2023-04.parquet"
+		},
+		"green_tripdata_August_Sink_properties_typeProperties_url": {
+			"value": "https://newyorktaxistorage98.dfs.core.windows.net/"
+		},
+		"green_tripdata_August_Source_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/ashwith1/DE2/master/data/New%20York%20Taxi%20Data%20Green/green_tripdata_2023-08.parquet"
+		},
+		"green_tripdata_December_Sink_properties_typeProperties_url": {
+			"value": "https://newyorktaxistorage98.dfs.core.windows.net/"
+		},
+		"green_tripdata_December_Source_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/ashwith1/DE2/master/data/New%20York%20Taxi%20Data%20Green/green_tripdata_2023-12.parquet"
+		},
+		"green_tripdata_Feb_Sink_properties_typeProperties_url": {
+			"value": "https://newyorktaxistorage98.dfs.core.windows.net/"
+		},
+		"green_tripdata_Feb_Source_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/ashwith1/DE2/master/data/New%20York%20Taxi%20Data%20Green/green_tripdata_2023-02.parquet"
+		},
+		"green_tripdata_Jan_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/ashwith1/DE2/master/data/New%20York%20Taxi%20Data%20Green/green_tripdata_2023-01.parquet"
+		},
+		"green_tripdata_JanSink_properties_typeProperties_url": {
+			"value": "https://newyorktaxistorage98.dfs.core.windows.net/"
+		},
+		"green_tripdata_July_Sink_properties_typeProperties_url": {
+			"value": "https://newyorktaxistorage98.dfs.core.windows.net/"
+		},
+		"green_tripdata_July_Source_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/ashwith1/DE2/master/data/New%20York%20Taxi%20Data%20Green/green_tripdata_2023-07.parquet"
+		},
+		"green_tripdata_June_Sink_properties_typeProperties_url": {
+			"value": "https://newyorktaxistorage98.dfs.core.windows.net/"
+		},
+		"green_tripdata_June_Source_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/ashwith1/DE2/master/data/New%20York%20Taxi%20Data%20Green/green_tripdata_2023-06.parquet"
+		},
+		"green_tripdata_March_Sink_properties_typeProperties_url": {
+			"value": "https://newyorktaxistorage98.dfs.core.windows.net/"
+		},
+		"green_tripdata_March_Source_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/ashwith1/DE2/master/data/New%20York%20Taxi%20Data%20Green/green_tripdata_2023-03.parquet"
+		},
+		"green_tripdata_May_Sink_properties_typeProperties_url": {
+			"value": "https://newyorktaxistorage98.dfs.core.windows.net/"
+		},
+		"green_tripdata_May_Source_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/ashwith1/DE2/master/data/New%20York%20Taxi%20Data%20Green/green_tripdata_2023-05.parquet"
+		},
+		"green_tripdata_November_Sink_properties_typeProperties_url": {
+			"value": "https://newyorktaxistorage98.dfs.core.windows.net/"
+		},
+		"green_tripdata_November_Source_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/ashwith1/DE2/master/data/New%20York%20Taxi%20Data%20Green/green_tripdata_2023-11.parquet"
+		},
+		"green_tripdata_October_Sink_properties_typeProperties_url": {
+			"value": "https://newyorktaxistorage98.dfs.core.windows.net/"
+		},
+		"green_tripdata_October_Source_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/ashwith1/DE2/master/data/New%20York%20Taxi%20Data%20Green/green_tripdata_2023-10.parquet"
+		},
+		"green_tripdata_September_Sink_properties_typeProperties_url": {
+			"value": "https://newyorktaxistorage98.dfs.core.windows.net/"
+		},
+		"green_tripdata_September_Source_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/ashwith1/DE2/master/data/New%20York%20Taxi%20Data%20Green/green_tripdata_2023-09.parquet"
+		}
+	}
+}
